@@ -40,7 +40,7 @@ public class usuarioServicesImpl implements usuarioServices {
 	@Override
 	public List<ListaReproduccion> listasReproduccion(String nickname) {
 		
-		ResponseEntity<List<ListaReproduccion>> listRes = rest.exchange("http://microservicio-canciones/lista/user/"+nickname,HttpMethod.GET,null,
+		ResponseEntity<List<ListaReproduccion>> listRes = rest.exchange("https://microservicio-canciones.herokuapp.com/lista/user/"+nickname,HttpMethod.GET,null,
 				new ParameterizedTypeReference<List<ListaReproduccion>>() {
         });
 		
@@ -51,7 +51,7 @@ public class usuarioServicesImpl implements usuarioServices {
 
 	@Override
 	public List<Cancion> listasCanciones(String nickname,String nombre) {
-		ResponseEntity<List<Cancion>> listRes = rest.exchange("http://microservicio-canciones/lista/canciones/"+nickname+"/"+nombre,HttpMethod.GET,null,
+		ResponseEntity<List<Cancion>> listRes = rest.exchange("https://microservicio-canciones.herokuapp.com/lista/canciones/"+nickname+"/"+nombre,HttpMethod.GET,null,
 				new ParameterizedTypeReference<List<Cancion>>() {
         });
 		
