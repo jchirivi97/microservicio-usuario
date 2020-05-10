@@ -18,8 +18,6 @@ import edu.escuelaing.arep.usuarios.services.usuarioServices;
 @RestController
 @RequestMapping(value="/usuario")
 public class usuarioController {
-	
-	private RestTemplate rest;
 
 	@Autowired
 	usuarioServices usuarioServ;

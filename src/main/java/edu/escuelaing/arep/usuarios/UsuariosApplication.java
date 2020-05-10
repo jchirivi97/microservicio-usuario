@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableCircuitBreaker
 public class UsuariosApplication {
 
 	@Bean
