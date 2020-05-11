@@ -24,6 +24,7 @@ public class usuarioController {
 	
 	@RequestMapping(method = RequestMethod.GET,path="/{nickname}")
 	public ResponseEntity<usuario> getUser(@PathVariable("nickname") String nickname){
+		
 		usuario user = usuarioServ.getUser(nickname);
 		return ResponseEntity.ok(user);
 	}
