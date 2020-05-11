@@ -13,7 +13,7 @@ import edu.escuelaing.arep.usuarios.services.usuarioServices;
 import org.springframework.http.HttpStatus;
 
 @RestController
-@RequestMapping(value="/usuario")
+@RequestMapping(value="/api")
 public class usuarioController {
 
 	@Autowired
@@ -24,7 +24,7 @@ public class usuarioController {
 		usuarioServ.saveUser(user);
 	}
 	
-	@RequestMapping(method = RequestMethod.GET,path="/{nickname}")
+	@RequestMapping(method = RequestMethod.GET,path="/usuario/{nickname}")
 	public ResponseEntity<?> getUser(@PathVariable("nickname") String nickname){	
 		usuario user = usuarioServ.getUser(nickname);
                 String data = new Gson().toJson(user);
@@ -32,7 +32,7 @@ public class usuarioController {
                 return new ResponseEntity<>(data, HttpStatus.ACCEPTED);
 	}
 	
-	@RequestMapping(method = RequestMethod.GET,path="/{nickname}/{password}")
+	@RequestMapping(method = RequestMethod.GET,path="/usuario/{nickname}/{password}")
 	public ResponseEntity<?> getUser(@PathVariable("nickname") String nickname,@PathVariable("password") String password){
 		usuario user = usuarioServ.login(nickname, password);
                 
