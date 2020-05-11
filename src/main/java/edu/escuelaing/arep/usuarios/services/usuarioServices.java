@@ -10,5 +10,5 @@ public interface usuarioServices {
 	
 	usuario login (String nickname, String password);
 	
-	void saveUser (usuario user);
+	void saveUser (String nickname,String nombre,String password);
 }

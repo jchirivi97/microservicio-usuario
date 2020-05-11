@@ -1,7 +1,5 @@
 package edu.escuelaing.arep.usuarios.services.impl;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,26 +9,29 @@ import edu.escuelaing.arep.usuarios.services.usuarioServices;
 
 @Service
 public class usuarioServicesImpl implements usuarioServices {
-
 	
-	@Autowired
 	usuarioRepository usuarioRepo;
-
-	@Override
-	public usuario getUser(String nickname) {
-		Optional<usuario> user = usuarioRepo.findById(nickname);
-		return user.get();
+	
+	private void dataBase() {
+		usuarioRepo = new usuarioRepository();
 	}
 
 	@Override
-	public void saveUser(usuario user) {
-		usuarioRepo.save(user);		
+	public usuario getUser(String nickname) {
+		dataBase();
+		return usuarioRepo.getUser(nickname);
+	}
+
+	@Override
+	public void saveUser(String nickname,String nombre, String password) {
+		dataBase();
+		usuarioRepo.saveUser(nickname, nombre, password);		
 	}
 	
 	@Override
 	public usuario login(String nickname, String password) {
-		usuario user = usuarioRepo.getLogin(nickname, password);
-		return user;
+		dataBase();
+		return usuarioRepo.getLogin(nickname, password);
 	}
 
 	
