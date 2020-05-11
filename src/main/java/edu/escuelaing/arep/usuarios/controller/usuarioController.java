@@ -31,6 +31,7 @@ public class usuarioController {
 	@RequestMapping(method = RequestMethod.GET,path="/{nickname}/{password}")
 	public ResponseEntity<usuario> getUser(@PathVariable("nickname") String nickname,@PathVariable("password") String password){
 		usuario user = usuarioServ.login(nickname, password);
+		System.out.println("usuario de mierda:  "+user.getNickname()+"**"+user.getNombre());
 		return ResponseEntity.ok(user);
 	}
 }

@@ -1,6 +1,5 @@
 package edu.escuelaing.arep.usuarios.services;
 
-import java.util.List;
 
 import edu.escuelaing.arep.usuarios.model.usuario;
 
