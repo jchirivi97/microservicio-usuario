@@ -1,6 +1,5 @@
 package edu.escuelaing.arep.usuarios.services.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.escuelaing.arep.usuarios.model.usuario;

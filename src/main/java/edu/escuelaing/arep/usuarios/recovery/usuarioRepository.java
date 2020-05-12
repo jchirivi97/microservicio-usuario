@@ -86,9 +86,6 @@ public class usuarioRepository {
             pstmt.setString(3, password);
             ResultSet rs = pstmt.executeQuery();
             c.close();
-            if (rs.next()){
-                u = new usuario(rs.getString("nickname"),rs.getString("nombre"),rs.getString("password"));
-            }
             pstmt.close();
             rs.close();
         } catch (Exception ex) {
