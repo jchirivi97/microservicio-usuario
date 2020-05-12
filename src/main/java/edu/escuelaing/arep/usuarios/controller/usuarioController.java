@@ -29,7 +29,7 @@ public class usuarioController {
 		usuario user = usuarioServ.getUser(nickname);
                 String data = new Gson().toJson(user);
 
-                return new ResponseEntity<>(data, HttpStatus.ACCEPTED);
+                return new ResponseEntity<>(user, HttpStatus.ACCEPTED);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET,path="/{nickname}/{password}")
@@ -38,6 +38,6 @@ public class usuarioController {
                 
                 String data = new Gson().toJson(user);
 
-                return new ResponseEntity<>(data, HttpStatus.ACCEPTED);
+                return new ResponseEntity<>(user, HttpStatus.ACCEPTED);
 	}
 }

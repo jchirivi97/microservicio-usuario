@@ -12,7 +12,7 @@ import edu.escuelaing.arep.usuarios.model.usuario;
 
 public class usuarioRepository {
 	
-	private static final String urlDb = "jdbc:postgresql://ec2-52-70-15-120.compute-1.amazonaws.com:5432/df8fnet8g4qges?user=vkmhojgspnrtck&password=56a27fd884fbc84e91acbf895eec119d174ccb7155d612ea9ef27b3af78e9f68";
+	private static final String urlDb = "jdbc:postgresql://ec2-3-231-16-122.compute-1.amazonaws.com:5432/d82dgnug27a8v1?user=vebjylzbvbhkrd&password=7c23c795d8069466561a02303eb7027408f04235b2525c347f204f3249664fef";
     private Connection c;
     private usuario u;
     
